@@ -27,7 +27,7 @@ class Coche(Vehiculo):
         print(f'{self.marca} {self.modelo} de color {self.color} ha sido encendido.')
 
 # Creación de instancias y demostración del programa
-if name == "main":
+if __name__ == "main":
     # Crear instancia de Vehículo
     vehiculo1 = Vehiculo('Toyota', 'Corolla')
     print(vehiculo1)
