@@ -1,13 +1,14 @@
 import json
 
+# Clase Producto
 class Producto:
-    def _init_(self, id_producto, nombre, cantidad, precio):
+    def __init__(self, id_producto, nombre, cantidad, precio):
         self.id_producto = id_producto
         self.nombre = nombre
         self.cantidad = cantidad
         self.precio = precio
 
-    def _str_(self):
+    def __str__(self):
         return f"ID: {self.id_producto}, Nombre: {self.nombre}, Cantidad: {self.cantidad}, Precio: {self.precio}"
 
     # Métodos getters y setters
@@ -33,8 +34,9 @@ class Producto:
         self.precio = precio
 
 
+# Clase Inventario
 class Inventario:
-    def _init_(self, archivo_inventario='inventario.json'):
+    def __init__(self, archivo_inventario='inventario.json'):
         self.productos = {}
         self.archivo_inventario = archivo_inventario
         self.cargar_inventario()
@@ -149,5 +151,5 @@ def main():
             print("Opción no válida. Por favor, intente de nuevo.")
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
